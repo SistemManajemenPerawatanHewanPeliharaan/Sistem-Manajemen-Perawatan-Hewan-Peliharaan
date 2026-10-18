@@ -1,0 +1,16 @@
+[
+    {
+        "telepon": "12312323",
+        "nama_hewan": "Kucing",
+        "jenis_hewan": "son",
+        "umur_hewan": "913123",
+        "paket_jasa": "B"
+    },
+    {
+        "telepon": "085812",
+        "nama_hewan": "Kelinci",
+        "jenis_hewan": "sigma",
+        "umur_hewan": "90",
+        "paket_jasa": "a"
+    }
+]

@@ -178,7 +178,7 @@ def hapus_data():
     except ValueError:
         print("Input tidak Valid!")
 
-def login():
+def login(): #FUNGSI LOGIN
     print("==============================")
     print("|       SISTEM LOGIN         |")
     print("==============================")
@@ -188,28 +188,47 @@ def login():
     if not data:
         print("Belum ada akun di database.")
         return
+    
+    coba = 0
+    maks_coba = 3
 
-    username = input("Masukkan Username: ")
-    password = pwinput.pwinput("Masukkan Password: ", mask = "*")
+    while True:
+        username = input("Masukkan Username: ")
+        password = pwinput.pwinput("Masukkan Password: ", mask = "*")
 
-    login_berhasil = False
-    for akun in data:
-        if akun["username"] == username and akun ["password"] == password:
-            login_berhasil = True
-            print(f"Login Berhasil! Selamat Datang, {username}")
+        login_berhasil = False
+        for akun in data:
+            if akun["username"] == username and akun ["password"] == password:
+                login_berhasil = True
+                print(f"Login Berhasil! Selamat Datang, {username}")
 
 
-            if akun ["role"] == "admin":
-                print("Masuk ke Menu Admin")
-                menu_admin()
+                if akun ["role"] == "admin":
+                    print("Masuk ke Menu Admin")
+                    menu_admin()
+                else:
+                    print("Masuk ke Menu Pelanggan")
+                    menu_pelanggan()
+                return
+
+        if not login_berhasil:
+            coba += 1   
+            kesempatan = 3 - coba   
+            print("Username atau Password salah!")
+
+            if kesempatan > 0:
+                print(f"Sisa kesempatan login anda {kesempatan} kali lagi.")
             else:
-                print("Masuk ke Menu Pelanggan")
-                menu_pelanggan()
-            break
+                print("Anda telah 3x salah memasukkan data.")
+                print("Sistem terkunci. Mohon coba lagi setelah 60 detik")
 
-    if not login_berhasil:
-        print("Username atau Password salah!")
+                for detik in range(60, 0, -1): #60 adalah detik awal, 0 adalah tujuan akhir dan -1 adalah step penurunan
+                    print(f"Silahkan tunggu {detik} detik tersisa")
+                    time.sleep(1)
+                print("Waktu cooldown selesai. Silahkan masukkan ulang username dan password anda.")
 
+                coba = 0
+                
 def menu_admin():
     while True:
         print("============================================")

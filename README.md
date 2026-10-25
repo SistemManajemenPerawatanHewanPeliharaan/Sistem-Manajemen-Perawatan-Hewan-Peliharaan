@@ -16,7 +16,7 @@ Pada bagian menu utama terdapat pilihan login bagi Pengguna yang sudah memiliki 
 <br>
 <img width="1773" alt="PA ASIXX-Page-1revisi drawio" src="https://github.com/user-attachments/assets/989a2988-faa4-4019-9807-cc2a7ea132ca" />
 ### Menu SuperAdmin
-Pada role SuperAdmin
+Pada role SuperAdmin 
 <br>
 <img width="1602" alt="PA ASIXX-Page-2revisi drawio" src="https://github.com/user-attachments/assets/43d8a22f-66e6-4403-9b9c-c037825c19cf" />
 ### Menu User

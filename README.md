@@ -20,7 +20,23 @@ Pada role SuperAdmin terdapat pilihan:
 
 #### 1. Tambah Data Pelanggan
 
-dimana ``SuperAdmin`` menginput data pelanggan seperti nomor telepon pelanggan
+``SuperAdmin`` menginput kebutuhan data pelanggan seperti nomor telepon pelanggan, nama pemilik hewan peliharaan, nama hewan peliharaan, jenis hewan peliharaan dan umur hewan peliharaan. Setelah itu sistem akan secara otomatis menampilkan output data pelanggan baru. Untuk input nomor telepon dan umur hanya bisa diinput dengan angka.
+
+#### 2. Lihat Data Pelanggan
+
+``SuperAdmin`` dapat melihat data pelanggan secara spesifik dengan pilihan menu ini.
+
+#### 3. Lihat Antrian
+
+``SuperAdmin`` dapat melihat secara garis besar berapa antrian pelanggan ``PetHouse``.
+
+#### 4. Perbarui Data Pelanggan
+
+``SuperAdmin`` dapat memperbarui data dari pelanggan apabila pelanggan tersebut ingin mengganti paket yang tersedia dengan menginput nomor antrian terlebih dahulu. Jika ``SuperAdmin`` menginput dengan teks dan bukan angka, maka sistem akan otomatis menampilkan ``"input tidak valid"`` atau jika nomor antrian/data tidak tercatat sebagai pelanggan, maka sistem akan secara otomatis menampilkan ``"tambahkan pelanggan terlebih dahulu"``.
+
+#### 5. Hapus Data Pelanggan
+
+
 <br>
 <img width="1602" alt="PA ASIXX-Page-2revisi drawio" src="https://github.com/user-attachments/assets/43d8a22f-66e6-4403-9b9c-c037825c19cf" />
 ### Menu User

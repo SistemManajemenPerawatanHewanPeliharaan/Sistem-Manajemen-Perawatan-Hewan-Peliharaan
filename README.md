@@ -13,29 +13,29 @@
 
 Program ini digunakan untuk mengelola data perawatan hewan peliharaan dimana terdapat 2 role, yaitu Admin dan user. Kedua role harus login terlebih dahulu dengan menggunakan username dan password untuk masuk ke dalam program, setiap user wajib registrasi akun sebelum login. Role 'Admin' memiliki hak akses untuk menambah data pelanggan, menampilkan data pelanggan, melihat antrian, mengubah data pelanggan, menghapus data pelanggan dan melihat laporan keuangan. Sedangkan role 'User' hanya dapat melihat paket jasa, melihat antrian, melakukan pembayaraan dan top up. Berikut tipe - tipe kode yang kami gunakan pada program :
 
-1. json (JavaScript Object Notation) berfungsi untuk membaca dan menyimpan data dalam format JSON, kami gunakan untuk menyimpan data akun setiap pengguna selesai melakukan penginputan username dan password saat registrasi, data pelanggan setiap admin selesai penginputan dan data peket jasa.
+1. ``json (JavaScript Object Notation)`` berfungsi untuk membaca dan menyimpan data dalam format JSON, kami gunakan untuk menyimpan data akun setiap pengguna selesai melakukan penginputan username dan password saat registrasi, data pelanggan setiap admin selesai penginputan dan data peket jasa.
    
-2. pwinput berfungsi untuk menyembunyikan password dengan cara menampilkan "**" saat penginputan. Jenis library ini kami gunakan ketika role 'Admin' dan 'User' ingin login dan memasukan password.
+2. ``pwinput`` berfungsi untuk menyembunyikan password dengan cara menampilkan "**" saat penginputan. Jenis library ini kami gunakan ketika role 'Admin' dan 'User' ingin login dan memasukan password.
 
-3. prettyTable berfungsi untuk merapikan dan menampilkan data dalam bentuk tabel, Jenis library ini kami gunakan untuk menampilkan data pelanggan dan antrian.
+3. ``prettyTable`` berfungsi untuk merapikan dan menampilkan data dalam bentuk tabel, Jenis library ini kami gunakan untuk menampilkan data pelanggan dan antrian.
 
-4. os berfungsi untuk mengatur dan berinteraksi dengan sistem operasi komputer, lebih spesifik kami menggunakan os.path.exists() jenis library ini kami gunakan untuk mengecek apakah akun dan data pelanggan sudah ada di data_akun.json dan data_pelanggan.json atau belum.
+4. ``os`` berfungsi untuk mengatur dan berinteraksi dengan sistem operasi komputer, lebih spesifik kami menggunakan os.path.exists() jenis library ini kami gunakan untuk mengecek apakah akun dan data pelanggan sudah ada di data_akun.json dan data_pelanggan.json atau belum.
 
-5. time berfungsi untuk mengatur waktu yang digunakan pada fitur cooldown atau jeda waktu hitung mundur (time.sleep) saat salah login sebanyak 3x kali.
+5. ``time`` berfungsi untuk mengatur waktu yang digunakan pada fitur cooldown atau jeda waktu hitung mundur (time.sleep) saat salah login sebanyak 3x kali.
 
-6. function berfungsi untuk blok kode dalam fungsi untuk menjalankan tugas jika di panggil. Tipe data ini kami gunakan untuk beberapa tugas seperti simpan_akun(), tampilkan_data(), dll
+6. ``function`` berfungsi untuk blok kode dalam fungsi untuk menjalankan tugas jika di panggil. Tipe data ini kami gunakan untuk beberapa tugas seperti simpan_akun(), tampilkan_data(), dll
 
-7. Percabangan (if, elif, else) berfungsi dalam pengamnilan keputusan atau alur logika berdasarkan kondisi tertentu. Tipe kode ini kami gunakan untuk beberapa tugas seperti penentuan hak akses role (if akun["role"] == "admin":), penentuan menu (if pilihan == "1": ), dll
+7. ``Percabangan (if, elif, else)`` berfungsi dalam pengamnilan keputusan atau alur logika berdasarkan kondisi tertentu. Tipe kode ini kami gunakan untuk beberapa tugas seperti penentuan hak akses role (if akun["role"] == "admin":), penentuan menu (if pilihan == "1": ), dll
 
-8. while True berfungsi untuk melakukan perulangan atau looping pada intruksi yang diberikan yang tidak akan berhenti, kecuali terdapat transfer statement (continue dan break). Jenis looping ini digunakan untuk membuat menu utama, menu admin, menu user serta validasi input memastikan umur hewan dan nomor telepon pelanggan harus berupa angka.
+8. ``while True`` berfungsi untuk melakukan perulangan atau looping pada intruksi yang diberikan yang tidak akan berhenti, kecuali terdapat transfer statement (continue dan break). Jenis looping ini digunakan untuk membuat menu utama, menu admin, menu user serta validasi input memastikan umur hewan dan nomor telepon pelanggan harus berupa angka.
 
-9. for berfungsi untuk melakukan pperulangan atau looping pada elemen list atau dictionary. Digunakan untuk mencari data akun yang cocok saat login, memproses isi database pelanggan, hingga membuat hitung mundur saat sistem terkunci.
+9. ``for`` berfungsi untuk melakukan pperulangan atau looping pada elemen list atau dictionary. Digunakan untuk mencari data akun yang cocok saat login, memproses isi database pelanggan, hingga membuat hitung mundur saat sistem terkunci.
 
-10. list ( [] ) berfungsi untuk menyimpan banyak data dalam satu variabel secara berurutan yang dapat diubah. Tipe kode ini kami gunakan untuk menampung banyak data akun atau daftar pelanggan ( data.append() )
+10. ``list ( [] )`` berfungsi untuk menyimpan banyak data dalam satu variabel secara berurutan yang dapat diubah. Tipe kode ini kami gunakan untuk menampung banyak data akun atau daftar pelanggan ( data.append() )
 
-11. Dictionary ( {} ) digunakan untuk menyimpan data berpasangan (key-value) seperti data detail akun ( "username" , "password" , "role" ) dan detail pelanggan ( "telepon" , "nama_hewan" <dll)
+11. ``Dictionary ( {} )`` digunakan untuk menyimpan data berpasangan (key-value) seperti data detail akun ( "username" , "password" , "role" ) dan detail pelanggan ( "telepon" , "nama_hewan" <dll)
 
-12. 
+12. ``Error Handling`` berfungsi untuk mencegah program berhenti mendadak saat terjadi excpection. Kami menggunakan "try" dan "except", except json.JSONDecodeError: menangani error jika file JSON kosong atau rusak saat di baca, except ValueError menangani kesalahan input seperti meminta input angka int(input()) tetapi admin malah memasukan huruf.
 
 ## Flowchart
 ### Menu Utama

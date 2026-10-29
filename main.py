@@ -237,26 +237,38 @@ def registrasi():
     for akun in data:
         if akun["username"] == username:
             print("Username sudah terdaftar! Silahkan gunakan username lain.")
-            return
+            continue
 
     while True:
         password = pwinput.pwinput("Masukkan Password (4-6 Digit): ", mask = "*")
+        pin = pwinput.pwinput("Masukkan pin untuk top up: ").strip()
 
         if not password:
             print("Password tidak boleh kosong")
         elif not (len(password) >= 4): #perintah yang dimana password harus memiliki minimal jumlah 4 digit
             print("Password minimal harus memiliki panjang 4 digit")
+        elif not pin:
+            print("Pin tidak boleh kosong")
+        elif any(akun.get("pin") == pin for akun in data):
+                print("Pin sudah terdaftar! Silahkan gunakan pin lain.")
+                continue
+        if not pin.isdigit():
+                print("Hanya boleh memasukan angka!")
+                continue
         else:
             break
     akun_baru = {
         "username" : username,
         "password" : password,
-        "role" : "pelanggan"
+        "role" : "pelanggan",
+        "pin" : pin,
+        "saldo_paw" : 0
     }
 
     data.append(akun_baru)
     simpan_akun(data)
     print("Registrasi akun berhasil! Silahkan Login.")
+    time.sleep(2)
 
 def login():
     bersihkan_layar()
@@ -282,6 +294,7 @@ def login():
             if akun["username"] == username and akun ["password"] == password:
                 login_berhasil = True
                 print(f"Login Berhasil! Selamat Datang, {username}")
+                time.sleep(2)
 
 
                 if akun ["role"] == "admin":
@@ -315,6 +328,18 @@ def login():
 def top_up(username):
     
     akun_list = baca_akun()
+
+    akun = None
+    for a in akun_list:
+        if a["username"] == username:
+            akun = a
+            break
+
+    if akun is None:
+        print("Akun tidak ditemukan")
+        input("\nTekan enter untuk kembali ke menu pelanggan")
+        return
+    
     print("=====================")
     print("| TOP UP SALDO PAW  |")
     print("=====================")
@@ -322,33 +347,39 @@ def top_up(username):
     print("Minimal Top Up = Rp. 10.000 (10 Paw)")
 
     while True:
-        try:
             nominal = input("Masukkan nominal rupiah yang ingin di Top - Up: ")
             if not nominal.isdigit():
                 print("Input harus berupa angka positif tidak minus (-)!")
-                return
-
+                continue
             rupiah = int(nominal)
             if rupiah < 10000:
                 print("Minimal top up adalah Rp.10.000!")
                 continue
-
-            paw = rupiah // 1000
-
-            for akun in akun_list:
-                if akun["username"] == username:
-                    if "saldo_paw" not in akun:
-                        akun["saldo_paw"] = 0
-                    akun["saldo_paw"] += paw
-                    simpan_akun(akun_list)
-                    print(f"Top up berhasil!")
-                    print(f"Menambah {paw} Paw. Total saldo Paw Anda: {akun['saldo_paw']} Paw")
-
-                    input("\nTekan enter untuk kembali ke menu pelanggan")
-                    return
             break
-        except ValueError:
-            print("Input harus berupa angka dan tidak boleh kosong!")
+    
+    #verifikasi PIN
+    pin_tersimpan = akun.get("pin")
+    if not pin_tersimpan:
+        print("Akun kamu belum mempunyai PIN.")
+        return
+                
+    percobaan = 3
+    while percobaan > 0:
+        pin_input = pwinput.pwinput("Masukkan PIN Anda: ").strip()
+        if pin_input == pin_tersimpan:
+            break
+        percobaan -= 1
+        print(f"PIN salah! Sisa percobaan: {percobaan}")
+    else:
+        print("PIN salah 3 kali. Transaksi dibatalkan.")
+        return
+        
+    paw = rupiah // 1000
+    simpan_akun(akun_list)
+    akun["saldo_paw"] = akun.get("saldo_paw", 0) + paw
+    print(f"Top up berhasil!")
+    print(f"Menambah {paw} Paw. Total saldo Paw Anda: {akun['saldo_paw']} Paw")
+    input("\nTekan enter untuk kembali ke menu pelanggan")
 
 def baca_transaksi():
     if not os.path.exists("laporan_keuangan.json"):
@@ -395,18 +426,39 @@ def pembayaran(username):
     pilihan_paket = input("Pilih paket yang ingin dipesan (A/B/C): ").upper()
     if pilihan_paket not in harga_paket:
         print("Pilihan paket tidak valid!")
+        time.sleep(1)
         return
 
     biaya = harga_paket[pilihan_paket]
 
     #validasi saldo minus
-    if user_akun["saldo_paw"] < biaya:
+    if user_akun["saldo_paw", 0] < biaya:
         print("Saldo anda tidak mencukupi!. Silahkan top up!")
+        time.sleep(1)
         return
 
+    #verifikasi pin
+    pin_tersimpan = akun.login.get("pin")
+    if not pin_tersimpan:
+        print("Akun kamu belum mempunyai PIN.")
+        return
+    
+    percobaan = 3
+    while percobaan > 0:
+        pin_input = pwinput.pwinput("Masukkan PIN Anda: ").strip()
+        if pin_input == pin_tersimpan:
+            break
+        percobaan -= 1
+        print(f"PIN salah! Sisa percobaan: {percobaan}")
+    else:
+        print("PIN salah 3 kali. Transaksi dibatalkan.")
+        return
+    
     #kurangi saldo
     user_akun["saldo_paw"] -= biaya
     simpan_akun(akun_list)
+    print("Pembayaran berhasil!")
+    time.sleep(1)
 
     #simpan transaksi
     transaksi = baca_transaksi()
@@ -436,7 +488,7 @@ def pembayaran(username):
 
     input("\nTekan Enter untuk kembali ke Menu Utama")
 def riwayat_transaksi(username, role):
-   
+
     transaksi = baca_transaksi()
     if not transaksi:
         print("Belum ada data Transaksi")
@@ -611,6 +663,7 @@ while True:
             print("\nWOI JANGAN!")
     except EOFError:
         print("\nWOI JANGAN!")
+
 
 
 

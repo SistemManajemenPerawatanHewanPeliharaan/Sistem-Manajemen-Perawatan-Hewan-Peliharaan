@@ -40,10 +40,14 @@ def simpan_data(data):
     
 
 def tambah_data():
-    while True:
-        data = baca_data()
-        nama_pemilik = input("Masukkan nama pemilik hewan: ")
-
+        while True:
+            data = baca_data()
+            nama_pemilik = input("Masukkan nama pemilik hewan: ").strip()
+            if nama_pemilik == "":
+                print("Nama pemilik tidak boleh kosong!")
+                continue
+            break
+    
         while True:
             try:
                 telepon = input("Masukkan Nomor Telepon Pelanggan (12 Digit): ")
@@ -55,20 +59,55 @@ def tambah_data():
             except ValueError:
                 print("Nomor telepon harus berupa angka!")
 
-        nama_hewan = input("Masukkan Nama Hewan: ")
-        jenis_hewan = input("Masukkan Jenis Hewan: ")
+        while True:
+            nama_hewan = input("Masukkan Nama Hewan: ").strip()
+            if nama_hewan == "":
+                print("Nama hewan tidak boleh kosong")
+                continue
+            break
+
+        jenis_hewan_valid = ("anjing", "kucing", "hamster", "kelinci")
+        while True:
+            jenis_hewan = input("Masukkan Jenis Hewan (Anjing, Kucing, Hamster, dan Kelinci): ").strip()
+            if jenis_hewan == "":
+                print("Nama hewan tidak boleh kosong")
+                continue
+            elif jenis_hewan not in jenis_hewan_valid:
+                print("Jenis hewan hanya bisa sesuai pilihan")
+                continue
+            else:
+                jenis_hewan = jenis_hewan.capitalize()
+                break
+                
 
         while True:
-            try:
-                umur_hewan = int(input("Masukkan umur hewan: "))
-                if umur_hewan < 0:
-                    print("Umur hewan tidak boleh minus (-). Silahkan coba lagi")
-                    continue
-                break
-            except ValueError:
-                print("Harap masukkan angka yang valid untuk umur hewan")
+                input_umur = input("Masukkan umur hewan: ").strip()
 
-        paket_jasa = input("Masukkan Paket (A, B, C): ")
+                if not input_umur.isdigit():
+                    print("Hanya boleh memasukan angka!")
+                    continue
+
+                elif len(input_umur) > 3:
+                    print("Umur hewan tidak boleh lebih dari 3 digit!")
+                    continue
+
+                else:
+                    umur_hewan = int(input_umur)
+                    break
+
+        jenis_paket_valid = ("A", "B", "C")
+        while True:
+            paket_jasa = input("Masukkan paket jasa (A, B, C): ").strip()
+            if paket_jasa == "":
+                print("Paket jasa tidak boleh kosong")
+                continue
+            elif paket_jasa not in jenis_paket_valid:
+                print("Paket jasa sesuai pilihan")
+                continue
+            else:
+                paket_jasa = paket_jasa.capitalize()
+                break
+
         pelanggan_baru = {
             "nama_pemilik" : nama_pemilik,
             "telepon" : telepon,
@@ -80,7 +119,7 @@ def tambah_data():
         
         data.append(pelanggan_baru)
         simpan_data(data)
-        break
+        
 
 def tampilkan_data():
     
@@ -576,4 +615,3 @@ while True:
 
 
     
-

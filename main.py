@@ -160,6 +160,9 @@ def tampilkan_data():
 
 def ubah_data(): 
     bersihkan_layar()
+
+    JENIS_HEWAN = ["Anjing", "Kucing", "Kelinci", "Hamster"]
+    PAKET_JASA = ["A", "B", "C"]
     data = baca_data()
     if not data:
         print("Belum ada data pelanggan!")
@@ -177,9 +180,34 @@ def ubah_data():
             data[index]["nama_pemilik"] = input("Masukkan Nama Pemilik: ") or data[index]["nama_pemilik"]
             data[index]["telepon"] = input("Masukkan No. Telepon baru (Kosongkan jika tetap): ") or data[index]["telepon"]
             data[index]["nama_hewan"] = input("Masukkan Nama Hewan Baru (Kosongkan jika tetap): ") or data[index]["nama_hewan"]
-            data[index]["jenis_hewan"] = input("Masukkan Jenis Hewan Baru (Kosongkan jika tetap): ") or data[index]["jenis_hewan"]
+
+            while True:
+                print(f"\nJenis Hewan (sekarang: {data[index]['jenis_hewan']})")
+                for no, jenis in enumerate(JENIS_HEWAN, start=1):
+                    print(f"{no}. {jenis}")
+                pilihan = input(f"Pilih (1-{len(JENIS_HEWAN)}) (Kosongkan jika tetap): ").strip()
+
+                if not pilihan:
+                    break
+                if pilihan.isdigit() and 1 <= int(pilihan) <= len(JENIS_HEWAN):
+                    data[index]["jenis_hewan"] = JENIS_HEWAN[int(pilihan) - 1]
+                    break
+                print("Pilihan tidak valid!")
+
             data[index]["umur_hewan"] = input("Masukkan Umur Hewan Baru (Kosongkan jika tetap): ") or data[index]["umur_hewan"]
-            data[index]["paket_jasa"] = input("Masukkan Paket Jasa Baru (A/B/C) (Kosongkan jika tetap): ").upper() or data[index]["paket_jasa"]
+
+            while True:
+                print(f"\nPaket Jasa (sekarang: {data[index]['paket_jasa']})")
+                for no, paket in enumerate(PAKET_JASA, start=1):
+                    print(f"{no}. Paket {paket}")
+                pilihan = input(f"Pilih (1-{len(PAKET_JASA)}) (Kosongkan jika tetap): ").strip()
+
+                if not pilihan:
+                    break
+                if pilihan.isdigit() and 1 <= int(pilihan) <= len(PAKET_JASA):
+                    data[index]["paket_jasa"] = PAKET_JASA[int(pilihan) - 1]
+                    break
+                print("Pilihan tidak valid!")
             data[index]["status_hewan"] = input("Masukkan Status Hewan (1: Sudah / 2: Belum): ").upper() or data[index]["status_hewan"]
             # or digunakan jika admin mengosongkan input (langsung tekan enter)
             # upper() apapun huruf yang diinput outputnya akan kapital
@@ -221,18 +249,36 @@ def hapus_data():
 def lihat_antrian():
     bersihkan_layar()
     try:
-        if not os.path.exists("laporan_keuangan.json"):
-            total_antrian = 0
-        else:
-            with open("laporan_keuangan.json", "r") as file_json:
-                transaksi = json.load(file_json)
-                total_antrian = len(transaksi)
-    except json.JSONDecodeError:
-        total_antrian = 0
+        data = baca_data()
+    except (FileNotFoundError, json.JSONDecodeError):
+        data = []
+
+    antrian = [
+        p for p in data 
+        if p.get("status_grooming", "belum") != "Lunas"
+        and p.get("status_pembayaran") == "Lunas"
+    ]
 
     print("======================================")
-    print(f"|       TOTAL ANTRIAN : {total_antrian}|")
+    print(f"|       TOTAL ANTRIAN : {antrian}|")
     print("======================================")
+
+    if not antrian:
+        print("Tidak ada antrian saat ini.")
+        input("\nTekan Enter untuk kembali")
+        return
+
+    table = PrettyTable()
+    table.field_names = ["No", "Nama Pemilik", "Nama Hewan", "Paket"]
+    for no, p in enumerate(antrian, start=1):
+        table.add_row([
+            no,
+            p.get("nama_pemilik", p.get("username", "-")),
+            p.get("nama_hewam", "-"),
+            p.get("paket_jasa", "-")
+        ])
+
+    print(table)
     input("\nTekan Enter untuk kembali")
 
 
@@ -412,7 +458,6 @@ def simpan_transaksi(data):
     file_json.close() 
 
 def pembayaran(username):
-    
     akun_list = baca_akun()
     user_akun = None
 
@@ -427,50 +472,58 @@ def pembayaran(username):
 
     if "saldo_paw" not in user_akun:
         user_akun["saldo_paw"] = 0
+    
+    #validasi status pembayaran
+    data = baca_data()
+    daftar = [
+        (i, p) for i, p in enumerate(akun_list)
+        if p.get("username") == username
+        and p.get("status_grooming", "belum") != "Lunas"
+    ]
 
+    if not daftar:
+        print("Tidak ada tagihan yang harus dibayar.")
+        input("\nTekan Enter untuk kembali ke Menu Utama")
+        return
+
+    
     print("==========================")
     print("|   PEMBAYARAN LAYANAN   |")
     print("==========================")
     print(f"Saldo Paw anda saat ini: {user_akun['saldo_paw']} Paw")
 
-    #Tampilkan paket yang sudah dipesan oelh pelanggan sebelumnya
-
-    transaksi = baca_transaksi()
-    riwayat_user =[]
-
-    for t in transaksi:
-        if t.get("username") == username:
-            riwayat_user.append(t)
-
     print("================== PESANAN ANDA ====================")
+    for no, (i, p) in enumerate(daftar, start=1):
+        biaya_paket = harga_paket.get(p.get("paket_jasa"), 0)
+        print(f"{no}. {p.get('nama_hewan')} | Paket {p.get('paket_jasa')} | {biaya_paket} Paw")
 
-    if not riwayat_user:
-        print("Anda belum memiliki pesanan sebelumnya. ")
+    # pilih pesanan yang dibayar
+    try:
+        pilih = int(input("\nPilih nomor pesanan yang ingin dibayar: ")) - 1
+    except ValueError:
+        print("Input harus berupa angka!")
+        time.sleep(2)
+        return
 
-    else:
-        for t in riwayat_user:
-            print("==============================")
-            print(f"No. Invoice : {t.get('invoice')}")
-            print(f"Waktu       : {t.get('waktu')}")
-            print(f"Paket Jasa  : Paket {t.get('paket')}")
-            print(f"Biaya       : {t.get('biaya')} Paw")
-            print("Status      : SUCCESS")
-            print("==============================")
+    if not (0 <= pilih < len(daftar)):
+        print("Nomor pesanan tidak valid!")
+        time.sleep(2)
+        return
 
-    print("\nDaftar Harga Paket: ")
-    print("- Paket A : 30 Paw")
-    print("- Paket B : 20 Paw")
-    print("- Paket C : 10 Paw")
+    index_data, pesanan = daftar[pilih]
+    pilihan_paket = pesanan.get("paket_jasa")
 
+    # biaya otomatis sesuai paket yang dipesan
+    if pilihan_paket not in harga_paket:
+        print("Harga untuk paket ini tidak ditemukan!")
+        time.sleep(2)
+        return
 
     harga_paket = {"A":30, "B":20, "C":10}
 
-    pilihan_paket = input("Pilih paket yang ingin dipesan (A/B/C): ").upper()
-
-    if pilihan_paket not in harga_paket:
-        print("Pilihan paket tidak valid!")
-        time.sleep(2)
-        return
+    print(f"\nHewan : {pesanan.get('nama_hewan')}")
+    print(f"Paket : {pilihan_paket}")
+    print(f"Biaya : {harga_paket} Paw")
 
     biaya = harga_paket[pilihan_paket]
 
@@ -530,8 +583,6 @@ def pembayaran(username):
     print("|===============================|")
 
     input("\nTekan Enter untuk kembali ke Menu Utama")
-
-
 
 def riwayat_transaksi(username, role):
 
@@ -625,13 +676,13 @@ def menu_admin():
             ubah_data()
         elif pilihan == "5":
             hapus_data()
-        elif pilihan == "7":
+        elif pilihan == "6":
             laporan_ringkas_admin()
         elif pilihan == "0":
             print("Log Out Berhasil!")
             break
         else:
-            print("Pilihan tidak valid. Silahkan pilih angka(1-5)!")
+            print("Pilihan tidak valid. Silahkan pilih angka(1-6)!")
             time.sleep(1)
 
 def menu_pelanggan(username):
@@ -640,17 +691,20 @@ def menu_pelanggan(username):
         print("============================================")
         print("|          MENU CUSTOMER PETHOUSE          |")
         print("============================================")   
-        print("| 1. Lihat Paket                           |")
-        print("| 2. Lihat Antrian                         |")
-        print("| 3. Pembayaran                            |")
-        print("| 4. Top Up Saldo Paw                      |")
-        print("| 5. Riwayat Pembayaran                    |")
-        print("| 6. Status Hewan                          |")
+        print("| 1. Pendaftaran Online                    |")
+        print("| 2. Lihat Paket                           |")
+        print("| 3. Lihat Antrian                         |")
+        print("| 4. Pembayaran                            |")
+        print("| 5. Top Up Saldo Paw                      |")
+        print("| 6. Riwayat Pembayaran                    |")
+        print("| 7. Status Hewan                          |")
         print("| 0. Log Out                               |")
         print("============================================")
-        pilihan = input("Masukkan pilihan (0-6): ")
+        pilihan = input("Masukkan pilihan (0-7): ")
 
         if pilihan == "1":
+            isi_data_sendiri(username)
+        if pilihan == "2":
             bersihkan_layar()
             print("============================================================")
             print("|                       DAFTAR PAKET                       |")
@@ -660,15 +714,15 @@ def menu_pelanggan(username):
             print("| - Paket C : 10 Paw (Grooming)                            |")
             print("============================================================")
             input("\nTekan Enter untuk kembali")
-        elif pilihan == "2":
-            lihat_antrian()
         elif pilihan == "3":
-            pembayaran(username)
+            lihat_antrian()
         elif pilihan == "4":
-            top_up(username)
+            pembayaran(username)
         elif pilihan == "5":
-            riwayat_transaksi(username, role="pelanggan")
+            top_up(username)
         elif pilihan == "6":
+            riwayat_transaksi(username, role="pelanggan")
+        elif pilihan == "7":
             lihat_status_hewan(username)
         elif pilihan == "0":
             print("Log Out Berhasil.")
@@ -754,7 +808,87 @@ def lihat_status_hewan(username):
     input("\nTekan Enter untuk kembali")
 
 
+def isi_data_sendiri(username):
+    bersihkan_layar()
+    data = baca_data()
 
+    print("=====================================")
+    print("|      ISI DATA HEWAN ANDA          |")
+    print("=====================================")
+
+    # nama pemilik
+    while True:
+        nama_pemilik = input("Nama Pemilik: ").strip()
+        if nama_pemilik:
+            break
+        print("Nama pemilik tidak boleh kosong!")
+
+    # telepon
+    while True:
+        telepon = input("No. Telepon: ").strip()
+        if not telepon.isdigit():
+            print("Nomor telepon hanya boleh berisi angka!")
+        elif not (10 <= len(telepon) <= 12):
+            print("Nomor telepon harus 10-12 digit!")
+        else:
+            break
+
+    # nama hewan
+    while True:
+        nama_hewan = input("Nama Hewan: ").strip()
+        if nama_hewan:
+            break
+        print("Nama hewan tidak boleh kosong!")
+
+    # jenis hewan (pilihan)
+
+    while True:
+        JENIS_HEWAN = ["Anjing", "Kucing", "Kelinci", "Hamster"]
+
+        print("\nJenis Hewan:")
+        for no, jenis in enumerate(JENIS_HEWAN, start=1):
+            print(f"{no}. {jenis}")
+        pilihan = input(f"Pilih (1-{len(JENIS_HEWAN)}): ").strip()
+        if pilihan.isdigit() and 1 <= int(pilihan) <= len(JENIS_HEWAN):
+            jenis_hewan = JENIS_HEWAN[int(pilihan) - 1]
+            break
+        print("Pilihan tidak valid!")
+
+    # umur
+    while True:
+        umur_hewan = input("\nUmur Hewan (tahun): ").strip()
+        if umur_hewan.isdigit():
+            break
+        print("Umur harus berupa angka!")
+
+    # paket (pilihan)
+    while True:
+        PAKET_JASA = ["A", "B", "C"]
+        harga_paket = {"A":30, "B":20, "C":10}
+        print("\nPaket Jasa:")
+        for no, paket in enumerate(PAKET_JASA, start=1):
+            print(f"{no}. Paket {paket} ({harga_paket[paket]} Paw)")
+        pilihan = input(f"Pilih (1-{len(PAKET_JASA)}): ").strip()
+        if pilihan.isdigit() and 1 <= int(pilihan) <= len(PAKET_JASA):
+            paket_jasa = PAKET_JASA[int(pilihan) - 1]
+            break
+        print("Pilihan tidak valid!")
+
+    data.append({
+        "username_akun": username,
+        "nama_pemilik": nama_pemilik,
+        "telepon": telepon,
+        "nama_hewan": nama_hewan,
+        "jenis_hewan": jenis_hewan,
+        "umur_hewan": umur_hewan,
+        "paket_jasa": paket_jasa,
+        "status_grooming": "Belum",
+        "status_pembayaran": "Belum",
+    })
+
+    simpan_data(data)
+    print("\nData hewan berhasil ditambahkan! Silahkan lanjut ke menu pembayaran.")
+    input("\nTekan enter untuk kembali")
 
 def main():
     if not os.path.exists("data_akun.json"):
@@ -794,8 +928,3 @@ while True:
             print("\nWOI JANGAN!")
     except EOFError:
         print("\nWOI JANGAN!")
-
-
-
-
-    

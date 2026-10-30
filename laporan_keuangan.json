@@ -1,0 +1,23 @@
+[
+    {
+        "invoice": "INV-1793296058",
+        "username": "saya",
+        "paket": "A",
+        "biaya": 30,
+        "waktu": "2026-10-30 01:47:38"
+    },
+    {
+        "invoice": "INV-1793296153",
+        "username": "saya",
+        "paket": "A",
+        "biaya": 30,
+        "waktu": "2026-10-30 01:49:13"
+    },
+    {
+        "invoice": "INV-1793318904",
+        "username": "hy",
+        "paket": "A",
+        "biaya": 30,
+        "waktu": "2026-10-30 08:08:24"
+    }
+]

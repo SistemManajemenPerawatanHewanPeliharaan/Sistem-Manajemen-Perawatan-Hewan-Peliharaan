@@ -8,5 +8,26 @@
         "username": "user",
         "password": "123",
         "role": "pelanggan"
+    },
+    {
+        "username": "yocil",
+        "password": "123123123",
+        "role": "pelanggan",
+        "pin": "11111",
+        "saldo_paw": 99999999999999970
+    },
+    {
+        "username": "saya",
+        "password": "1234",
+        "role": "pelanggan",
+        "pin": "1234",
+        "saldo_paw": 1000000000063
+    },
+    {
+        "username": "hy",
+        "password": "1234",
+        "role": "pelanggan",
+        "pin": "1234",
+        "saldo_paw": 102
     }
 ]

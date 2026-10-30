@@ -242,7 +242,7 @@ def hapus_data():
 
     nama_hewan = data[index].get("nama_hewan")
     nama_pemilik = data[index].get("nama_pemilik")
-    
+
     while True:
         konfirmasi = input(f"Apakah anda yakin menghapus data hewan {nama_hewan} milik {nama_pemilik}? (y/n): ").strip().lower()
         if konfirmasi not in ("y", "n"):
@@ -743,6 +743,7 @@ def menu_pelanggan(username):
             break
         else:
             print("Pilihan tidak valid!")
+            time.sleep(1)
 
 def status_hewan():
     bersihkan_layar()
@@ -870,10 +871,19 @@ def isi_data_sendiri(username):
 
     # umur
     while True:
-        umur_hewan = input("\nUmur Hewan (tahun): ").strip()
-        if umur_hewan.isdigit():
-            break
-        print("Umur harus berupa angka!")
+            input_umur = input("umur hewan: ").strip()
+
+            if not input_umur.isdigit():
+                print("Hanya boleh memasukan angka!")
+                continue
+
+            elif len(input_umur) > 3:
+                print("Umur hewan tidak boleh lebih dari 3 digit!")
+                continue
+
+            else:
+                umur_hewan = int(input_umur)
+                break
 
     # paket (pilihan)
     while True:

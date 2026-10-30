@@ -96,8 +96,8 @@ def tambah_data():
                     print("Hanya boleh memasukan angka!")
                     continue
 
-                elif len(input_umur) > 2:
-                    print("Umur hewan tidak boleh lebih dari 2 digit!")
+                elif len(input_umur) > 3:
+                    print("Umur hewan tidak boleh lebih dari 3 digit!")
                     continue
 
                 else:
@@ -208,7 +208,7 @@ def ubah_data():
                     data[index]["paket_jasa"] = PAKET_JASA[int(pilihan) - 1]
                     break
                 print("Pilihan tidak valid!")
-            data[index]["status_hewan"] = input("Masukkan Status Hewan (1: Sudah / 2: Belum): ").upper() or data[index]["status_hewan"]
+            data[index]["status_grooming"] = input("Masukkan Status Hewan (1: Sudah / 2: Belum): ").upper() or data[index]["status_grooming"]
             # or digunakan jika admin mengosongkan input (langsung tekan enter)
             # upper() apapun huruf yang diinput outputnya akan kapital
 
@@ -230,21 +230,34 @@ def hapus_data():
     tampilkan_data()
     try:
         index = int(input("Masukkan nomor data pelanggan yang ingin dihapus: ")) - 1
-        if 0 <= index < len(data):
-            nama_hewan = data[index].get('nama_hewan')
-
-            konfirmasi = input(f"Apakah anda yakin menghapus data hewan {nama_hewan}? (y/n): '").lower()
-            if konfirmasi == "y":
-                data.pop(index)
-                simpan_data(data)
-                print("Data berhasil dihapus!")
-            else:
-                print("Penghapusan data dibatalkan.")
-        else:
-            print("Nomor data pelanggan tidak ditemukan!")
     except ValueError:
-        print("Input tidak Valid!")
+        print("Input tidak valid!")
+        input("\nTekan Enter untuk kembali")
+        return
 
+    if not (0 <= index < len(data)):
+        print("Nomor data pelanggan tidak ditemukan!")
+        input("\nTekan Enter untuk kembali")
+        return
+
+    nama_hewan = data[index].get("nama_hewan")
+    nama_pemilik = data[index].get("nama_pemilik")
+    
+    while True:
+        konfirmasi = input(f"Apakah anda yakin menghapus data hewan {nama_hewan} milik {nama_pemilik}? (y/n): ").strip().lower()
+        if konfirmasi not in ("y", "n"):
+            print("Input tidak valid! Masukkan y atau n.")
+            continue
+        break
+
+    if konfirmasi == "y":
+        data.pop(index)
+        simpan_data(data)
+        print("Data berhasil dihapus!")
+    else:
+        print("Penghapusan data dibatalkan.")
+
+    input("\nTekan Enter untuk kembali")
 
 def lihat_antrian():
     bersihkan_layar()
@@ -255,12 +268,11 @@ def lihat_antrian():
 
     antrian = [
         p for p in data 
-        if p.get("status_grooming", "belum") != "Lunas"
-        and p.get("status_pembayaran") == "Lunas"
+        if str (p.get("status_grooming", "Belum")) == "Belum"
     ]
 
     print("======================================")
-    print(f"|       TOTAL ANTRIAN : {antrian}|")
+    print(f"|       TOTAL ANTRIAN : {len(antrian)}|")
     print("======================================")
 
     if not antrian:
@@ -274,7 +286,7 @@ def lihat_antrian():
         table.add_row([
             no,
             p.get("nama_pemilik", p.get("username", "-")),
-            p.get("nama_hewam", "-"),
+            p.get("nama_hewan", "-"),
             p.get("paket_jasa", "-")
         ])
 
@@ -458,6 +470,8 @@ def simpan_transaksi(data):
     file_json.close() 
 
 def pembayaran(username):
+    harga_paket = {"A":30, "B":20, "C":10}
+
     akun_list = baca_akun()
     user_akun = None
 
@@ -476,9 +490,9 @@ def pembayaran(username):
     #validasi status pembayaran
     data = baca_data()
     daftar = [
-        (i, p) for i, p in enumerate(akun_list)
-        if p.get("username") == username
-        and p.get("status_grooming", "belum") != "Lunas"
+        (i, p) for i, p in enumerate(data)
+        if p.get("username_akun") == username
+        and p.get("status_pembayaran", "belum") != "Lunas"
     ]
 
     if not daftar:
@@ -519,14 +533,12 @@ def pembayaran(username):
         time.sleep(2)
         return
 
-    harga_paket = {"A":30, "B":20, "C":10}
+    biaya = harga_paket[pilihan_paket]
 
     print(f"\nHewan : {pesanan.get('nama_hewan')}")
     print(f"Paket : {pilihan_paket}")
     print(f"Biaya : {harga_paket} Paw")
-
-    biaya = harga_paket[pilihan_paket]
-
+    
     #validasi saldo minus
     if user_akun["saldo_paw"] < biaya:
         print("Saldo anda tidak mencukupi!. Silahkan top up!")
@@ -553,6 +565,8 @@ def pembayaran(username):
     #kurangi saldo
     user_akun["saldo_paw"] -= biaya
     simpan_akun(akun_list)
+    data[index_data]["status_pembayaran"] = "Lunas"
+    simpan_data(data)
     print("Pembayaran berhasil!")
     time.sleep(1)
 
@@ -918,6 +932,7 @@ def main():
             break
         else:
             print("Pilihan tidak valid!")
+            time.sleep(1)
 
 
 while True:

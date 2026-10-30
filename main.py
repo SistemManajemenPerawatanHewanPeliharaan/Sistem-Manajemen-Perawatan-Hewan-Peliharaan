@@ -45,6 +45,7 @@ def simpan_data(data):
     file_json = open("data_pelanggan.json", "w")
     json.dump(data, file_json, indent=4)
     file_json.close()
+    print("Perubahan data berhasil!")
     
     
 def tambah_data():
@@ -176,7 +177,7 @@ def ubah_data():
         if 0 <= index < len(data):
             print(f"Mengubah data untuk hewan: {data[index]['nama_hewan']}")
             
-            data[index]["nama_pemilik"] = input("Masukkan Nama Pemilik: ") or data[index]["nama_pemilik"]
+            data[index]["nama_pemilik"] = input("Masukkan Nama Pemilik (Kosongkan jika tetap): ") or data[index]["nama_pemilik"]
             data[index]["telepon"] = input("Masukkan No. Telepon baru (Kosongkan jika tetap): ") or data[index]["telepon"]
             data[index]["nama_hewan"] = input("Masukkan Nama Hewan Baru (Kosongkan jika tetap): ") or data[index]["nama_hewan"]
 

@@ -99,4 +99,9 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 
 <img width="1030" height="545" alt="image" src="https://github.com/user-attachments/assets/cb13696f-120e-4c04-a16c-7d252b06ec0c" />
 
+<img width="727" height="232" alt="image" src="https://github.com/user-attachments/assets/dab0ad32-72c2-4485-ae4c-868f2ed2028c" />
+
+<img width="411" height="330" alt="image" src="https://github.com/user-attachments/assets/7f4defe7-e86a-4a71-a0fb-ae8b445cd192" />
+
+
 

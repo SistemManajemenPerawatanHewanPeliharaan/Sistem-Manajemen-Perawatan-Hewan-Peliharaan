@@ -95,3 +95,6 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 <br>
 <img width="1891" alt="PA ASIXX-Page-3revisi drawio" src="https://github.com/user-attachments/assets/447d8d69-8235-4164-81eb-aab5f3876c07" />
 
+<img width="1030" height="545" alt="image" src="https://github.com/user-attachments/assets/cb13696f-120e-4c04-a16c-7d252b06ec0c" />
+
+

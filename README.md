@@ -118,19 +118,27 @@ b. Apabila username sudah terpakai <br>
 <img width="300" alt="Screenshot 2026-11-02 205429" src="https://github.com/user-attachments/assets/ea4d03de-3d0a-4681-9963-71975a0f5369" />
 
 ### SuperAdmin
+
 #### menu superadmin
+
 <img width="300" alt="Screenshot 2026-11-02 211939" src="https://github.com/user-attachments/assets/2ef3cd4f-0422-4cdb-abf3-e945d728cc0d" />
 #### tambah data pelanggan
+
 <img width="300" alt="Screenshot 2026-11-02 212151" src="https://github.com/user-attachments/assets/db1f8cd8-7789-4e6d-9029-5bf585e8a360" />
 #### lihat data pelanggan
+
 <img width="300" alt="Screenshot 2026-11-02 212214" src="https://github.com/user-attachments/assets/8cbe8f2b-f6b4-4663-a613-373c5e7fbd3d" />
 #### lihat antrian pelanggan
+
 <img width="300" alt="Screenshot 2026-11-02 212228" src="https://github.com/user-attachments/assets/d57d418f-0c5d-4736-b2f6-2223814f6cf1" />
 #### perbarui data pelanggan
+
 <img width="300" alt="Screenshot 2026-11-02 212312" src="https://github.com/user-attachments/assets/522ab9b5-9b3e-4920-881b-00319118a4ea" />
 #### hapus data pelanggan
+
 <img width="300" alt="Screenshot 2026-11-02 212531" src="https://github.com/user-attachments/assets/2f4e86b9-e046-4260-8de2-c8fd09c8ea9b" />
 #### lihat laporan keuangan
+
 <img width="300" alt="Screenshot 2026-11-02 212547" src="https://github.com/user-attachments/assets/d557b949-f0b8-46dc-92f7-bb26db008c07" />
 
 

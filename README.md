@@ -80,25 +80,35 @@ Pada role ``User`` yang merupakan role khusus pelanggan PetHouse, terdapat opsi:
 #### 0. Logout
 Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai ``User`` lalu akan kembali ke ``Menu Utama``.
 
-#### 1. Pemesanan
+#### 1. Membuat Pesanan
+``User`` dapat menambah pesanan dengan menginput kebutuhan input data seperti nomor telepon pemilik hewan peliharaan, nama hewan, jenis hewan, umur hewan, dan memilih paket grooming. Setelah itu data yang telah diinput akan disimpan ke data pelanggan
+
+#### 2. Lihat Paket
 ``User`` dapat melihat 3 jenis paket dengan opsi ini.
 
-#### 2. Lihat Antrian
+#### 3. Lihat Antrian
 ``User`` dapat melihat berapa total dari antrian pelanggan
 
-#### 3. Pembayaran
+#### 4. Pembayaran
 ``User`` dapat melakukan pembayaran dengan opsi ini dengan menginput nomor antrian dan input pin yang dibuat di ``Menu Utama`` lalu sistem akan menampilkan ``"pembayaran Berhasil"``.
 
-#### 4. TopUp
+#### 5. TopUp
 ``User`` dapat melakukan topup ke akun yang dibuat di PetHouse dari mata uang ``Rupiah`` lalu dikonversi ke mata uang ``Paw`` yang merupakan mata uang pada PetHouse sendiri. Topup dilakukan dengan menginput pin  terlebih dahulu dan kemudian memilih opsi topup.
 
 <br>
 <img width="1559" alt="PA ASIXX-Page-3-revisi sekian drawio" src="https://github.com/user-attachments/assets/a725dfc3-0c56-4077-9c9c-3badc5e23227" />
 
+## Output
+
 ### Menu Utama
-(jelaskan terdapat pilihan apa saja) <br>
+Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Registrasi`` dan yang ketiga adalah ``Keluar Program``. Pilihan pertama adalah jika user sudah membuat akun, pilihan kedua jika user belum memiliki akun, pilihan ketiga jika user ingin program berhenti berjalan.
+
+<br>
 <img width="400" alt="Screenshot 2026-11-02 203541" src="https://github.com/user-attachments/assets/cbc630c2-c9e9-4827-b7ff-ead0a5a08f3a" />
-a. Apabila input tidak sesuai pilihan yang tersedia dan tidak angka (jelaskan jika akan kembali ke penginputtan setelah 1 detik) <br>
+
+a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
+
+<br>
 <img width="145" height="98" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
 
 #### Menu Login

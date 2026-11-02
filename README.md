@@ -93,7 +93,7 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 ``User`` dapat melakukan topup ke akun yang dibuat di PetHouse dari mata uang ``Rupiah`` lalu dikonversi ke mata uang ``Paw`` yang merupakan mata uang pada PetHouse sendiri. Topup dilakukan dengan menginput pin  terlebih dahulu dan kemudian memilih opsi topup.
 
 <br>
-<img width="1891" alt="PA ASIXX-Page-3revisi drawio" src="https://github.com/user-attachments/assets/447d8d69-8235-4164-81eb-aab5f3876c07" />
+<img width="1559" height="1772" alt="PA ASIXX-Page-3-revvvv drawio" src="https://github.com/user-attachments/assets/8d0c67b7-8a83-4849-9a0a-0f0f5d80af7f" />
 
 ### Menu Utama
 (jelaskan terdapat pilihan apa saja) <br>

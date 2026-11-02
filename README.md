@@ -80,7 +80,7 @@ Pada role ``User`` yang merupakan role khusus pelanggan PetHouse, terdapat opsi:
 #### 0. Logout
 Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai ``User`` lalu akan kembali ke ``Menu Utama``.
 
-#### 1. Lihat Paket
+#### 1. Pemesanan
 ``User`` dapat melihat 3 jenis paket dengan opsi ini.
 
 #### 2. Lihat Antrian

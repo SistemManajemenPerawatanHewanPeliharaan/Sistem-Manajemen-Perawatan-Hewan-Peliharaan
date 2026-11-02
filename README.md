@@ -133,6 +133,9 @@ b. Apabila username sudah terpakai <br>
 
 <img width="452" height="422" alt="image" src="https://github.com/user-attachments/assets/a77a3c20-d00e-4b0b-b8cf-2e8c4d11308d" />
 
+<img width="701" height="661" alt="image" src="https://github.com/user-attachments/assets/e5604284-af85-44a2-867d-3962d82b8d0c" />
+
+
 
 
 

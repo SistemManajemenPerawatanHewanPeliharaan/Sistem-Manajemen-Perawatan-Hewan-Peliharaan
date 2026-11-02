@@ -106,8 +106,8 @@ Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Regist
 <br>
 <img width="400" alt="Screenshot 2026-11-02 203541" src="https://github.com/user-attachments/assets/cbc630c2-c9e9-4827-b7ff-ead0a5a08f3a" />
 
-a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
 
+a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
 <br>
 <img width="145" height="98" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
 

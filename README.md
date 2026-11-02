@@ -95,6 +95,30 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 <br>
 <img width="1891" alt="PA ASIXX-Page-3revisi drawio" src="https://github.com/user-attachments/assets/447d8d69-8235-4164-81eb-aab5f3876c07" />
 
+### Menu Utama
+(jelaskan terdapat pilihan apa saja) <br>
+<img width="400" alt="Screenshot 2026-11-02 203541" src="https://github.com/user-attachments/assets/cbc630c2-c9e9-4827-b7ff-ead0a5a08f3a" />
+a. Apabila input tidak sesuai pilihan yang tersedia dan tidak angka (jelaskan jika akan kembali ke penginputtan setelah 1 detik) <br>
+<img width="145" height="98" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
+
+#### Menu Login
+(jelaskan harus menginput apa saja) <br>
+a. Login berhasil sebagai SuperAdmin (jelaskan kalau sudah disediakan username sama passwordnya) <br>
+<img width="300" alt="Screenshot 2026-11-02 205828" src="https://github.com/user-attachments/assets/220e3a29-ba96-436a-a7fe-6f31e59ec785" />
+b. Login berhasil sebagai User <br>
+<img width="300" alt="Screenshot 2026-11-02 205911" src="https://github.com/user-attachments/assets/f8c24e2d-b6fa-4cae-9cd3-4362f0c189a1" />
+c. Apabila password salah (jelaskan boleh berapa kali salah dan setelah lebih dari 3 apa yang terjadi) <br>
+<img width="300" alt="Screenshot 2026-11-02 204408" src="https://github.com/user-attachments/assets/d5677731-c4c9-4ea7-b450-c14326b235eb" />
+
+### Menu User
+(jelaskan harus menginput apa saja) <br>
+a. Registrasi berhasil <br>
+<img width="300" alt="Screenshot 2026-11-02 205402" src="https://github.com/user-attachments/assets/ce4df161-1fda-4d20-a4d2-c0d0718a34ab" />
+b. Apabila username sudah terpakai <br>
+<img width="300" alt="Screenshot 2026-11-02 205429" src="https://github.com/user-attachments/assets/ea4d03de-3d0a-4681-9963-71975a0f5369" />
+
+### SuperAdmin
+
 ### User
 
 <img width="1030" height="545" alt="image" src="https://github.com/user-attachments/assets/cb13696f-120e-4c04-a16c-7d252b06ec0c" />

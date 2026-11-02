@@ -107,6 +107,8 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 
 <img width="565" height="293" alt="image" src="https://github.com/user-attachments/assets/7a1865e5-0f1b-4e94-acba-2cd10f1be882" />
 
+<img width="452" height="422" alt="image" src="https://github.com/user-attachments/assets/a77a3c20-d00e-4b0b-b8cf-2e8c4d11308d" />
+
 
 
 

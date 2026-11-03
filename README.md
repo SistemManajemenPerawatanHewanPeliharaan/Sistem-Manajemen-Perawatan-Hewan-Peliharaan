@@ -4,14 +4,14 @@
 **Mata Kuliah :** Pratikum Dasar-Dasar Pemograman <br>
 **Nama Kelompok:** A6 - ASIX GACOR <br>
 
-# Anggota Kelompok
+# 1. Anggota Kelompok
 
 1. Brian Hotlan Sitompul (2609116035)
 2. Sarah Afifah Ramadhani	(2609116024)
 3. Nova Cynthia	(2609116031)
 4. Chirenia Orphayana Altris Ganggung	(2609116038)
 
-# Peran dan Tanggung Jawab
+# 2. Peran dan Tanggung Jawab
 
 | Nama Anggota | NIM | Peran & Tanggung Jawab | GitHub |
 | :---: | :--- | :---: | :--- |
@@ -20,7 +20,7 @@
 | *Chirenia Orphayana Altris Ganggung* | 2609116038 | Menjelaskan program di laporan, finishing laporan, coding, dan mencari _bug_ dan _error_ | @ChireniaOrphayanaAltrisGanggung (https://github.com/ChireniaOrphayanaAltrisGanggung) |
 | *Nova Cynthia* | 2609116031 | Mencari _bug_ dan _error_, logika pemrograman, flowchart program dan coding | @novacynthia11-commits (https://github.com/novacynthia11-commits) |
 
-## Deskripsi
+# 3. Deskripsi
 
 Program ini digunakan untuk mengelola data perawatan hewan peliharaan dimana terdapat 2 role, yaitu Admin dan user. Kedua role harus login terlebih dahulu dengan menggunakan username dan password untuk masuk ke dalam program, setiap user wajib registrasi akun sebelum login. Role 'Admin' memiliki hak akses untuk menambah data pelanggan, menampilkan data pelanggan, melihat antrian, mengubah data pelanggan, menghapus data pelanggan dan melihat laporan keuangan. Sedangkan role 'User' hanya dapat melihat paket jasa, melihat antrian, melakukan pembayaraan dan top up. Berikut tipe - tipe kode yang kami gunakan pada program :
 
@@ -48,7 +48,7 @@ Program ini digunakan untuk mengelola data perawatan hewan peliharaan dimana ter
 
 12. ``Error Handling`` berfungsi untuk mencegah program berhenti mendadak saat terjadi excpection. Kami menggunakan "try" dan "except", except json.JSONDecodeError: menangani error jika file JSON kosong atau rusak saat di baca, except ValueError menangani kesalahan input seperti meminta input angka int(input()) tetapi admin malah memasukan huruf.
 
-## Flowchart
+# 4.  Flowchart
 ### Menu Utama
 
 Pada bagian menu utama terdapat pilihan login bagi Pengguna yang sudah memiliki akun, registrasi bagi Pengguna yang belum memiliki akun, dan exit. Pada bagian login, apa bila Pengguna melakukan lebih dari 3 kali percobaan gagal maka akan diberi jeda waktu 60 detik. Sedangkan pada bagian registrasi, apabila username sudah pernah digunakan, maka Pengguna akan diminta memasukkan ulang namanya. <br>
@@ -109,7 +109,7 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 <br>
 <img width="1559" alt="PA ASIXX-Page-3-revisi sekian drawio" src="https://github.com/user-attachments/assets/a725dfc3-0c56-4077-9c9c-3badc5e23227" />
 
-## Output
+# 5. Output
 
 ### Menu Utama
 Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Registrasi`` dan yang ketiga adalah ``Keluar Program``. Pilihan pertama adalah jika user sudah membuat akun, pilihan kedua jika user belum memiliki akun, pilihan ketiga jika user ingin program berhenti berjalan. 

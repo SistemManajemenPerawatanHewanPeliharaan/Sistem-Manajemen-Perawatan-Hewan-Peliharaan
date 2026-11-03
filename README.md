@@ -101,55 +101,57 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 ## Output
 
 ### Menu Utama
-Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Registrasi`` dan yang ketiga adalah ``Keluar Program``. Pilihan pertama adalah jika user sudah membuat akun, pilihan kedua jika user belum memiliki akun, pilihan ketiga jika user ingin program berhenti berjalan.
-
-<br>
+Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Registrasi`` dan yang ketiga adalah ``Keluar Program``. Pilihan pertama adalah jika user sudah membuat akun, pilihan kedua jika user belum memiliki akun, pilihan ketiga jika user ingin program berhenti berjalan. <br>
 <img width="400" alt="Screenshot 2026-11-02 203541" src="https://github.com/user-attachments/assets/cbc630c2-c9e9-4827-b7ff-ead0a5a08f3a" />
-
-
+<br>
 a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
 <br>
-<img width="145" height="98" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
+<img width="300" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
 
 #### Menu Login
-(jelaskan harus menginput apa saja) <br>
-a. Login berhasil sebagai SuperAdmin (jelaskan kalau sudah disediakan username sama passwordnya) <br>
+Program akan meminta meng-*input*kan Username dan Password yang sudah dibuat di menu registrasi sebelumnya. <br>
+a. Login berhasil sebagai SuperAdmin, khusus SuperAdmin Username dan Password sudah disediakan
+<br>
 <img width="300" alt="Screenshot 2026-11-02 205828" src="https://github.com/user-attachments/assets/220e3a29-ba96-436a-a7fe-6f31e59ec785" />
-b. Login berhasil sebagai User <br>
+<br>
+b. Login berhasil sebagai User, untuk User **wajib** melakukan registrasi terlebih dahulu agar akunnya terdaftar
+<br>
 <img width="300" alt="Screenshot 2026-11-02 205911" src="https://github.com/user-attachments/assets/f8c24e2d-b6fa-4cae-9cd3-4362f0c189a1" />
-c. Apabila password salah (jelaskan boleh berapa kali salah dan setelah lebih dari 3 apa yang terjadi) <br>
+<br>
+c. Apabila password salah, percobaan salah hanya 3 kali apabila lebih dari 3 kali maka akan diberi jeda 60 detik
+<br>
 <img width="300" alt="Screenshot 2026-11-02 204408" src="https://github.com/user-attachments/assets/d5677731-c4c9-4ea7-b450-c14326b235eb" />
 
-### Menu User
-(jelaskan harus menginput apa saja) <br>
+### Menu Registrasi
+Program akan meminta meng-*input*kan username, password, dan pin untuk top-up atau pembayaran nanti. <br>
 a. Registrasi berhasil <br>
 <img width="300" alt="Screenshot 2026-11-02 205402" src="https://github.com/user-attachments/assets/ce4df161-1fda-4d20-a4d2-c0d0718a34ab" />
+<br>
 b. Apabila username sudah terpakai <br>
 <img width="300" alt="Screenshot 2026-11-02 205429" src="https://github.com/user-attachments/assets/ea4d03de-3d0a-4681-9963-71975a0f5369" />
 
 ### SuperAdmin
-
 #### menu superadmin
-
 <img width="300" alt="Screenshot 2026-11-02 211939" src="https://github.com/user-attachments/assets/2ef3cd4f-0422-4cdb-abf3-e945d728cc0d" />
+
 #### tambah data pelanggan
-
 <img width="300" alt="Screenshot 2026-11-02 212151" src="https://github.com/user-attachments/assets/db1f8cd8-7789-4e6d-9029-5bf585e8a360" />
+
 #### lihat data pelanggan
+<img width="500" alt="Screenshot 2026-11-02 212214" src="https://github.com/user-attachments/assets/8cbe8f2b-f6b4-4663-a613-373c5e7fbd3d" />
 
-<img width="300" alt="Screenshot 2026-11-02 212214" src="https://github.com/user-attachments/assets/8cbe8f2b-f6b4-4663-a613-373c5e7fbd3d" />
 #### lihat antrian pelanggan
-
 <img width="300" alt="Screenshot 2026-11-02 212228" src="https://github.com/user-attachments/assets/d57d418f-0c5d-4736-b2f6-2223814f6cf1" />
+
 #### perbarui data pelanggan
+<img width="500" alt="Screenshot 2026-11-02 212312" src="https://github.com/user-attachments/assets/522ab9b5-9b3e-4920-881b-00319118a4ea" />
 
-<img width="300" alt="Screenshot 2026-11-02 212312" src="https://github.com/user-attachments/assets/522ab9b5-9b3e-4920-881b-00319118a4ea" />
 #### hapus data pelanggan
+<img width="500" alt="Screenshot 2026-11-02 212531" src="https://github.com/user-attachments/assets/2f4e86b9-e046-4260-8de2-c8fd09c8ea9b" />
 
-<img width="300" alt="Screenshot 2026-11-02 212531" src="https://github.com/user-attachments/assets/2f4e86b9-e046-4260-8de2-c8fd09c8ea9b" />
 #### lihat laporan keuangan
-
 <img width="300" alt="Screenshot 2026-11-02 212547" src="https://github.com/user-attachments/assets/d557b949-f0b8-46dc-92f7-bb26db008c07" />
+
 
 
 ### User

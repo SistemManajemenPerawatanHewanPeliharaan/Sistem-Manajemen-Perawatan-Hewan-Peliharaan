@@ -113,9 +113,7 @@ a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, pr
 
 #### Menu Login
 Program akan meminta meng-*input*kan Username dan Password yang sudah dibuat di menu registrasi sebelumnya. <br>
-a. Login berhasil sebagai ``SuperAdmin``, khusus ``SuperAdmin`` Username dan Password sudah disediakan.
-
-<br>
+a. Login berhasil sebagai ``SuperAdmin``, khusus ``SuperAdmin`` Username dan Password sudah disediakan. <br>
 <img width="300" alt="Screenshot 2026-11-02 205828" src="https://github.com/user-attachments/assets/220e3a29-ba96-436a-a7fe-6f31e59ec785" />
 
 b. Login berhasil sebagai ``User``, untuk ``User`` **wajib** melakukan registrasi terlebih dahulu agar akunnya terdaftar.

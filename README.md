@@ -139,31 +139,37 @@ b. Apabila username sudah terpakai. <br>
 ### SuperAdmin
 
 **1. Tambah data pelanggan** 
+
 Pada opsi ini dapat diisi dengan nama pemilik hewan, nomor telepon pemilik yang harus diisi dengan 12 digit angka, nama hewan, jenis hewan yang harus sesuai dengan daftar hewan pada sistem, umur hewan dengan limit 3 angka dan input paket. <br>
 <img width="720" height="217" alt="image" src="https://github.com/user-attachments/assets/1aa20a9b-ea54-4fba-83a3-a18b064fbf72" />
 
 
 **2. Lihat data pelanggan** 
+
 Opsi ini menampilkan data data yang telah diinput pelanggan dan status dari hewan tersebut, apakah statusnya sudah digrooming atau belum digrooming. <br>
 <img width="968" height="300" alt="image" src="https://github.com/user-attachments/assets/cf989c44-c8f1-4192-9be7-088e2cdaa7b1" />
 
 
 **3. Lihat antrian pelanggan** 
+
 Opsi ini menampilkan total antrian pelanggan dan data nama pemilik, nama hewan dan paket yang dipilih. <br>
 <img width="445" height="341" alt="image" src="https://github.com/user-attachments/assets/3935541b-59bc-46f7-ad09-530b4261ca2d" />
 
 
 **4. Perbarui data pelanggan** 
+
 Opsi ini ``SuperAdmi`n` dapat mengubah data pelanggan apabila pelanggan ingin mengubah beberapa datanya. <br>
 <img width="1181" height="872" alt="image" src="https://github.com/user-attachments/assets/fb0d6596-9487-42a5-9118-21e61507bd12" />
 
 
 **5. Hapus data pelanggan** 
+
 Opsi ini `SuperAdmin` dapat menghapus data pelanggan dengan menginput nomor antrian pelanggan. <br>
 <img width="1000" height="331" alt="image" src="https://github.com/user-attachments/assets/26872079-ad4b-41c5-bab9-1bce118fef45" />
 
 
 **6. Lihat laporan keuangan** 
+
 Opsi ini menampilkan rekapitulasi harian mencakup total transaksi, total pendapatan dan paket terlaris. <br>
 <img width="462" height="247" alt="image" src="https://github.com/user-attachments/assets/82e9a814-1532-49da-b785-391737305fc3" />
 

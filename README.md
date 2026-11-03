@@ -2,7 +2,7 @@
 **Program Studi :** Sistem Informasi <br>
 **Kelas :** A 2026 <br>
 **Mata Kuliah :** Pratikum Dasar-Dasar Pemograman <br>
-**Nama Kelompok:** ASIX GACOR <br>
+**Nama Kelompok:** A6 - ASIX GACOR <br>
 **Anggota Kelompok:**
 1. Brian Hotlan Sitompul (2609116035)
 2. Sarah Afifah Ramadhani	(2609116024)

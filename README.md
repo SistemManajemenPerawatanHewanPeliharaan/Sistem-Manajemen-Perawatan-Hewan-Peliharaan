@@ -14,8 +14,7 @@
 | *Brian Hotlan Sitompul* | 2609116035 | Peran| @Nairbeeeeee (https://github.com/Nairbeeeeee) |
 | *Sarah Afifah Ramadhani* | 2609116024 | Peran | @sarahafifahramadhani (https://github.com/sarahafifahramadhani) |
 | *Nova Cynthia* | 2609116031 | Peran | @novacynthia11-commits (https://github.com/novacynthia11-commits) 
-| *Chirenia Orphayana Altris Ganggung* | 2609116038 | Peran | @ChireniaOrphayanaAltrisGanggung
-(https://github.com/ChireniaOrphayanaAltrisGanggung) |
+| *Chirenia Orphayana Altris Ganggung* | 2609116038 | Peran | @ChireniaOrphayanaAltrisGanggung(https://github.com/ChireniaOrphayanaAltrisGanggung) |
 
 ## Deskripsi
 

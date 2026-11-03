@@ -176,29 +176,42 @@ Opsi ini menampilkan rekapitulasi harian mencakup total transaksi, total pendapa
 
 ### User
 
-1. Pendaftaran online, pada opsi ``User`` dapat mendaftarkan hewan peliharaannya secara online dengan meng-_input_ data data yang dibutuhkan. <br>
+**1. Pendaftaran online** 
+
+Pada opsi ``User`` dapat mendaftarkan hewan peliharaannya secara online dengan meng-_input_ data data yang dibutuhkan. <br>
 <img width="1030" height="545" alt="image" src="https://github.com/user-attachments/assets/cb13696f-120e-4c04-a16c-7d252b06ec0c" />
 
-2. Lihat paket, opsi ini menampilkan daftar paket yang tersedia. <br>
+**2. Lihat paket** 
+
+Opsi ini menampilkan daftar paket yang tersedia. <br>
 <img width="727" height="232" alt="image" src="https://github.com/user-attachments/assets/dab0ad32-72c2-4485-ae4c-868f2ed2028c" />
 
-3. Lihat antrian, opsi ini menampilkan daftar pelanggan secara singkat dan menampilkan jumlah total dari antrian. <br> 
+**3. Lihat antrian** 
+
+Opsi ini menampilkan daftar pelanggan secara singkat dan menampilkan jumlah total dari antrian. <br> 
 <img width="411" height="330" alt="image" src="https://github.com/user-attachments/assets/7f4defe7-e86a-4a71-a0fb-ae8b445cd192" />
 
-4. Pembayaran layanan, opsi ini menampilkan data pemesanan terlebih dahulu lalu ``User`` dapat memilih pemesanan mana yang akan dibayar dengan saldo yang dimiliki. Apabila saldo tidak mencukupi, maka ``User`` akan diminta untuk topup terlebih dahulu. <br>
+**4. Pembayaran layanan** 
+
+Opsi ini menampilkan data pemesanan terlebih dahulu lalu ``User`` dapat memilih pemesanan mana yang akan dibayar dengan saldo yang dimiliki. Apabila saldo tidak mencukupi, maka ``User`` akan diminta untuk topup terlebih dahulu. <br>
 <img width="486" height="413" alt="image" src="https://github.com/user-attachments/assets/f07dfc8c-7a6d-4588-9a93-007c5d304ea2" />
 
-5. Topup saldo paw, opsi ini dipilih apabila ``User`` ingin mengisi saldo dengan mata uang ``Paw`` untuk bisa melakukan pembayaran pada ``PetHouse``. <br>
+**5. Topup saldo paw** 
+
+Opsi ini dipilih apabila ``User`` ingin mengisi saldo dengan mata uang ``Paw`` untuk bisa melakukan pembayaran pada ``PetHouse``. <br>
 <img width="565" height="293" alt="image" src="https://github.com/user-attachments/assets/7a1865e5-0f1b-4e94-acba-2cd10f1be882" />
 
-6. Riwayat pembayaran, opsi ini menampilkan riwayat transaksi ``User`` pada ``petHouse``. <br>
+**6. Riwayat pembayaran** 
+
+Opsi ini menampilkan riwayat transaksi ``User`` pada ``petHouse``. <br>
 <img width="452" height="422" alt="image" src="https://github.com/user-attachments/assets/a77a3c20-d00e-4b0b-b8cf-2e8c4d11308d" />
 
-<img width="701" height="661" alt="image" src="https://github.com/user-attachments/assets/e5604284-af85-44a2-867d-3962d82b8d0c" />
+**7. Status hewan**
 
+Opsi ini menampilkan kepada ``User`` apakah hewan peliharaanya sudah digrooming atau belum. <br> 
 <img width="395" height="407" alt="image" src="https://github.com/user-attachments/assets/5c447ed6-93c6-4f42-b057-64aa573bda58" />
 
+**8. Invoice setelah transaksi**
 
-
-
-
+apabila ``User`` telah melakukan transaksi maka sistem akan menampilkan invoice pembayaran.
+<img width="701" height="661" alt="image" src="https://github.com/user-attachments/assets/e5604284-af85-44a2-867d-3962d82b8d0c" />

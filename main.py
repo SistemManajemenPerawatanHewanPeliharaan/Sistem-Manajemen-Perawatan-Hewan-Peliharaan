@@ -76,6 +76,7 @@ def tambah_data():
             break
 
         jenis_hewan_valid = ("anjing", "kucing", "hamster", "kelinci")
+
         while True:
             jenis_hewan = input("Masukkan Jenis Hewan (Anjing, Kucing, Hamster, dan Kelinci): ").strip().lower()
             if jenis_hewan == "":
@@ -105,7 +106,15 @@ def tambah_data():
                     break
 
         jenis_paket_valid = ("a", "b", "c")
+
         while True:
+            print("============================================================")
+            print("|                       DAFTAR PAKET                       |")
+            print("============================================================")
+            print("| - Paket A : 30 Paw (Grooming + rapihin bulu + vitamin)   |")
+            print("| - Paket B : 20 Paw (Grooming + vitamin)                  |")
+            print("| - Paket C : 10 Paw (Grooming)                            |")
+            print("============================================================")
             paket_jasa = input("Masukkan paket jasa (A, B, C): ").strip().lower()
             if paket_jasa == "":
                 print("Paket jasa tidak boleh kosong")
@@ -373,7 +382,7 @@ def registrasi():
 
     data.append(akun_baru)
     simpan_akun(data)
-    print("Registrasi akun berhasil! Silahkan Login.")
+    print("Akun berhasil dibuat. Silahkan Login untuk melanjutkan!")
     time.sleep(2)
 
 def login():
@@ -714,7 +723,7 @@ def menu_admin():
     while True:
         
         print("============================================")
-        print("|          MENU MANAJEMEN PETHOUSE         |")
+        print("|    MENU SUPERADMIN MANAJEMEN PETHOUSE    |")
         print("============================================")
         print("| 1. Tambah Data Pelanggan                 |")
         print("| 2. Tampilkan Data Pelanggan dan Hewan    |")
@@ -855,7 +864,7 @@ def lihat_status_hewan(username):
         return
 
     print("=====================================")
-    print("|        STATUS HEWAN ANDA          |")
+    print("|         STATUS HEWAN ANDA         |")
     print("=====================================")
 
     for hewan in hewan_user:
@@ -875,7 +884,7 @@ def isi_data_sendiri(username):
     data = baca_data()
 
     print("=====================================")
-    print("|      ISI DATA HEWAN ANDA          |")
+    print("|        ISI DATA HEWAN ANDA        |")
     print("=====================================")
 
     # nama pemilik
@@ -980,7 +989,7 @@ def main():
             break
         else:
             print("Pilihan tidak valid!")
-
+            time.sleep(1)
 
 while True:
     try:

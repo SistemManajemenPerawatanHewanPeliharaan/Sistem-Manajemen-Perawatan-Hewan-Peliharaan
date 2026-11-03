@@ -137,34 +137,30 @@ b. Apabila username sudah terpakai. <br>
 
 
 ### SuperAdmin
-#### Menu Superadnin
+#### Menu Superadmin
 <img width="485" height="333" alt="image" src="https://github.com/user-attachments/assets/24693376-27b6-435d-9f1b-8f097388f5f9" />
 
-
-#### Tambah Data Pelanggan
+1. Tambah data pelanggan, pada opsi ini dapat diisi dengan nama pemilik hewan, nomor telepon pemilik yang harus diisi dengan 12 digit angka, nama hewan, jenis hewan yang harus sesuai dengan daftar hewan pada sistem, umur hewan dengan limit 3 angka dan input paket.
 <img width="720" height="217" alt="image" src="https://github.com/user-attachments/assets/1aa20a9b-ea54-4fba-83a3-a18b064fbf72" />
 
 
-#### Lihat Data Pelanggan
+2. Lihat data pelanggan, opsi ini menampilkan data data yang telah diinput pelanggan dan status dari hewan tersebut, apakah statusnya sudah digrooming atau belum digrooming.
 <img width="968" height="300" alt="image" src="https://github.com/user-attachments/assets/cf989c44-c8f1-4192-9be7-088e2cdaa7b1" />
 
 
-#### Lihat Antrian Pelanggan
+3. Lihat antrian pelanggan, opsi ini menampilkan total antrian pelanggan dan data nama pemilik, nama hewan dan paket yang dipilih.
 <img width="445" height="341" alt="image" src="https://github.com/user-attachments/assets/3935541b-59bc-46f7-ad09-530b4261ca2d" />
 
-#### Perbarui Data Pelanggan
+4. Perbarui data pelanggan, opsi ini ``SuperAdmi`n` dapat mengubah data pelanggan apabila pelanggan ingin mengubah beberapa datanya.
 <img width="1181" height="872" alt="image" src="https://github.com/user-attachments/assets/fb0d6596-9487-42a5-9118-21e61507bd12" />
 
 
-#### Hapus Data Pelanggan
+5. Hapus data pelanggan, opsi ini `SuperAdmin` dapat menghapus data pelanggan dengan menginput nomor antrian pelanggan.
 <img width="1000" height="331" alt="image" src="https://github.com/user-attachments/assets/26872079-ad4b-41c5-bab9-1bce118fef45" />
 
 
-#### lihat laporan keuangan
+6. Lihat laporan keuangan, opsi ini menampilkan rekapitulasi harian mencakup total transaksi, total pendapatan dan paket terlaris.
 <img width="462" height="247" alt="image" src="https://github.com/user-attachments/assets/82e9a814-1532-49da-b785-391737305fc3" />
-
-
-
 
 ### User
 

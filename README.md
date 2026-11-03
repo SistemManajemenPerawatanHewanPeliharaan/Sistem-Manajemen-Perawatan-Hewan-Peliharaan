@@ -104,18 +104,21 @@ Jika ``User`` memilih opsi ini maka sistem akan mengeluarkan pelanggan sebagai `
 Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Registrasi`` dan yang ketiga adalah ``Keluar Program``. Pilihan pertama adalah jika user sudah membuat akun, pilihan kedua jika user belum memiliki akun, pilihan ketiga jika user ingin program berhenti berjalan. 
 
 <br>
-<img width="348" height="221" alt="image" src="https://github.com/user-attachments/assets/e484a335-1ce4-4452-ac03-9418214a084f" />
+<img width="362" height="206" alt="image" src="https://github.com/user-attachments/assets/250510dc-294e-443a-8d77-8f81a01841e6" />
+
+
 
 
 a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
 
 <br>
-<img width="300" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
+<img width="372" height="243" alt="image" src="https://github.com/user-attachments/assets/a3ed41ab-6898-4506-9f62-64cb4024095e" />
 
 #### Menu Login
 Program akan meminta meng-*input*kan Username dan Password yang sudah dibuat di menu registrasi sebelumnya. <br>
 a. Login berhasil sebagai ``SuperAdmin``, khusus ``SuperAdmin`` Username dan Password sudah disediakan. <br>
-<img width="382" height="192" alt="image" src="https://github.com/user-attachments/assets/0a9269f9-eb66-4637-88b6-0ddb4132868f" />
+<img width="433" height="180" alt="image" src="https://github.com/user-attachments/assets/f1d5cfcd-e7b7-4ff7-acfe-1f4a410da164" />
+
 
 
 b. Login berhasil sebagai ``User``, untuk ``User`` **wajib** melakukan registrasi terlebih dahulu agar akunnya terdaftar. <br>
@@ -141,7 +144,8 @@ b. Apabila username sudah terpakai. <br>
 **1. Tambah data pelanggan** 
 
 Pada opsi ini dapat diisi dengan nama pemilik hewan, nomor telepon pemilik yang harus diisi dengan 12 digit angka, nama hewan, jenis hewan yang harus sesuai dengan daftar hewan pada sistem, umur hewan dengan limit 3 angka dan input paket. <br>
-<img width="720" height="217" alt="image" src="https://github.com/user-attachments/assets/1aa20a9b-ea54-4fba-83a3-a18b064fbf72" />
+<img width="770" height="776" alt="image" src="https://github.com/user-attachments/assets/43ac9277-c1d3-41bb-abc5-8e620266242a" />
+
 
 
 **2. Lihat data pelanggan** 

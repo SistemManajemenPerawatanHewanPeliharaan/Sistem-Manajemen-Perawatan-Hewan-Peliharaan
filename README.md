@@ -158,13 +158,13 @@ Opsi ini menampilkan total antrian pelanggan dan data nama pemilik, nama hewan d
 
 **4. Perbarui data pelanggan** 
 
-Opsi ini ``SuperAdmi`n` dapat mengubah data pelanggan apabila pelanggan ingin mengubah beberapa datanya. <br>
+Opsi ini ``SuperAdmin`` dapat mengubah data pelanggan apabila pelanggan ingin mengubah beberapa datanya. <br>
 <img width="1181" height="872" alt="image" src="https://github.com/user-attachments/assets/fb0d6596-9487-42a5-9118-21e61507bd12" />
 
 
 **5. Hapus data pelanggan** 
 
-Opsi ini `SuperAdmin` dapat menghapus data pelanggan dengan menginput nomor antrian pelanggan. <br>
+Opsi ini ``SuperAdmin`` dapat menghapus data pelanggan dengan menginput nomor antrian pelanggan. <br>
 <img width="1000" height="331" alt="image" src="https://github.com/user-attachments/assets/26872079-ad4b-41c5-bab9-1bce118fef45" />
 
 
@@ -213,5 +213,5 @@ Opsi ini menampilkan kepada ``User`` apakah hewan peliharaanya sudah digrooming 
 
 **8. Invoice setelah transaksi**
 
-apabila ``User`` telah melakukan transaksi maka sistem akan menampilkan invoice pembayaran.
+Apabila ``User`` telah melakukan transaksi maka sistem akan menampilkan invoice pembayaran. <br>
 <img width="701" height="661" alt="image" src="https://github.com/user-attachments/assets/e5604284-af85-44a2-867d-3962d82b8d0c" />

@@ -3,18 +3,22 @@
 **Kelas :** A 2026 <br>
 **Mata Kuliah :** Pratikum Dasar-Dasar Pemograman <br>
 **Nama Kelompok:** A6 - ASIX GACOR <br>
-**Anggota Kelompok:**
+
+# Anggota Kelompok
+
 1. Brian Hotlan Sitompul (2609116035)
 2. Sarah Afifah Ramadhani	(2609116024)
 3. Nova Cynthia	(2609116031)
 4. Chirenia Orphayana Altris Ganggung	(2609116038)
 
+# Peran dan Tanggung Jawab
+
 | Nama Anggota | NIM | Peran & Tanggung Jawab | GitHub |
 | :---: | :--- | :---: | :--- |
 | *Brian Hotlan Sitompul* | 2609116035 | Peran| @Nairbeeeeee (https://github.com/Nairbeeeeee) |
 | *Sarah Afifah Ramadhani* | 2609116024 | Peran | @sarahafifahramadhani (https://github.com/sarahafifahramadhani) |
-| *Nova Cynthia* | 2609116031 | Peran | @novacynthia11-commits (https://github.com/novacynthia11-commits) 
-| *Chirenia Orphayana Altris Ganggung* | 2609116038 | Peran | @ChireniaOrphayanaAltrisGanggung(https://github.com/ChireniaOrphayanaAltrisGanggung) |
+| *Chirenia Orphayana Altris Ganggung* | 2609116038 | Peran | @ChireniaOrphayanaAltrisGanggung (https://github.com/ChireniaOrphayanaAltrisGanggung) |
+| *Nova Cynthia* | 2609116031 | Peran | @novacynthia11-commits (https://github.com/novacynthia11-commits) |
 
 ## Deskripsi
 

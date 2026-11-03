@@ -110,7 +110,9 @@ Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Regist
 a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
 
 <br>
-<img width="300" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
+<img width="355" height="256" alt="image" src="https://github.com/user-attachments/assets/993596d1-b38d-4cb5-90fb-b9934b043fe5" />
+
+
 
 #### Menu Login
 Program akan meminta meng-*input*kan Username dan Password yang sudah dibuat di menu registrasi sebelumnya. <br>

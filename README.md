@@ -143,7 +143,8 @@ b. Apabila username sudah terpakai. <br>
 <img width="485" height="333" alt="image" src="https://github.com/user-attachments/assets/24693376-27b6-435d-9f1b-8f097388f5f9" />
 
 1. Tambah data pelanggan, pada opsi ini dapat diisi dengan nama pemilik hewan, nomor telepon pemilik yang harus diisi dengan 12 digit angka, nama hewan, jenis hewan yang harus sesuai dengan daftar hewan pada sistem, umur hewan dengan limit 3 angka dan input paket. <br>
-<img width="720" height="217" alt="image" src="https://github.com/user-attachments/assets/1aa20a9b-ea54-4fba-83a3-a18b064fbf72" />
+<img width="751" height="742" alt="image" src="https://github.com/user-attachments/assets/acbaaf24-de4d-4f09-89ab-98297a626126" />
+
 <br>
 2. Lihat data pelanggan, opsi ini menampilkan data data yang telah diinput pelanggan dan status dari hewan tersebut, apakah statusnya sudah digrooming atau belum digrooming. <br>
 <img width="968" height="300" alt="image" src="https://github.com/user-attachments/assets/cf989c44-c8f1-4192-9be7-088e2cdaa7b1" />

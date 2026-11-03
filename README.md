@@ -110,14 +110,12 @@ Menu utama memiliki 3 opsi, yang pertama adalah ``Login``, kedua adalah ``Regist
 a. Apabila user menginput text ataupun input selain dari opsi yang diberikan, program akan menampilkan ``"Pilihan tidak Valid."`` dan akan kembali meminta user untuk menginput setelah 1 detik.
 
 <br>
-<img width="355" height="256" alt="image" src="https://github.com/user-attachments/assets/993596d1-b38d-4cb5-90fb-b9934b043fe5" />
-
-
+<img width="300" alt="Screenshot 2026-11-02 203750" src="https://github.com/user-attachments/assets/c7bd2c2c-60f7-4224-8760-9e7170a915fe" />
 
 #### Menu Login
 Program akan meminta meng-*input*kan Username dan Password yang sudah dibuat di menu registrasi sebelumnya. <br>
 a. Login berhasil sebagai ``SuperAdmin``, khusus ``SuperAdmin`` Username dan Password sudah disediakan. <br>
-<img width="370" height="177" alt="image" src="https://github.com/user-attachments/assets/0af6e424-f70e-4caa-8a3e-0cc888404839" />
+<img width="382" height="192" alt="image" src="https://github.com/user-attachments/assets/0a9269f9-eb66-4637-88b6-0ddb4132868f" />
 
 
 b. Login berhasil sebagai ``User``, untuk ``User`` **wajib** melakukan registrasi terlebih dahulu agar akunnya terdaftar. <br>
@@ -139,47 +137,53 @@ b. Apabila username sudah terpakai. <br>
 
 
 ### SuperAdmin
-#### Menu Superadmin
-<img width="485" height="333" alt="image" src="https://github.com/user-attachments/assets/24693376-27b6-435d-9f1b-8f097388f5f9" />
 
 1. Tambah data pelanggan, pada opsi ini dapat diisi dengan nama pemilik hewan, nomor telepon pemilik yang harus diisi dengan 12 digit angka, nama hewan, jenis hewan yang harus sesuai dengan daftar hewan pada sistem, umur hewan dengan limit 3 angka dan input paket. <br>
-<img width="751" height="742" alt="image" src="https://github.com/user-attachments/assets/acbaaf24-de4d-4f09-89ab-98297a626126" />
+<img width="720" height="217" alt="image" src="https://github.com/user-attachments/assets/1aa20a9b-ea54-4fba-83a3-a18b064fbf72" />
 
 <br>
 2. Lihat data pelanggan, opsi ini menampilkan data data yang telah diinput pelanggan dan status dari hewan tersebut, apakah statusnya sudah digrooming atau belum digrooming. <br>
 <img width="968" height="300" alt="image" src="https://github.com/user-attachments/assets/cf989c44-c8f1-4192-9be7-088e2cdaa7b1" />
+
 <br>
 3. Lihat antrian pelanggan, opsi ini menampilkan total antrian pelanggan dan data nama pemilik, nama hewan dan paket yang dipilih. <br>
 <img width="445" height="341" alt="image" src="https://github.com/user-attachments/assets/3935541b-59bc-46f7-ad09-530b4261ca2d" />
+
 <br>
 4. Perbarui data pelanggan, opsi ini ``SuperAdmi`n` dapat mengubah data pelanggan apabila pelanggan ingin mengubah beberapa datanya. <br>
 <img width="1181" height="872" alt="image" src="https://github.com/user-attachments/assets/fb0d6596-9487-42a5-9118-21e61507bd12" />
+
 <br>
 5. Hapus data pelanggan, opsi ini `SuperAdmin` dapat menghapus data pelanggan dengan menginput nomor antrian pelanggan. <br>
 <img width="1000" height="331" alt="image" src="https://github.com/user-attachments/assets/26872079-ad4b-41c5-bab9-1bce118fef45" />
+
 <br>
 6. Lihat laporan keuangan, opsi ini menampilkan rekapitulasi harian mencakup total transaksi, total pendapatan dan paket terlaris. <br>
 <img width="462" height="247" alt="image" src="https://github.com/user-attachments/assets/82e9a814-1532-49da-b785-391737305fc3" />
 
 ### User
 
+1. Pendaftaran online, pada opsi ``User`` dapat mendaftarkan hewan peliharaannya secara online dengan meng-_input_ data data yang dibutuhkan. <br>
 <img width="1030" height="545" alt="image" src="https://github.com/user-attachments/assets/cb13696f-120e-4c04-a16c-7d252b06ec0c" />
 
+2. Lihat paket, opsi ini menampilkan daftar paket yang tersedia. <br>
 <img width="727" height="232" alt="image" src="https://github.com/user-attachments/assets/dab0ad32-72c2-4485-ae4c-868f2ed2028c" />
 
+3. Lihat antrian, opsi ini menampilkan daftar pelanggan secara singkat dan menampilkan jumlah total dari antrian. <br> 
 <img width="411" height="330" alt="image" src="https://github.com/user-attachments/assets/7f4defe7-e86a-4a71-a0fb-ae8b445cd192" />
 
+4. Pembayaran layanan, opsi ini menampilkan data pemesanan terlebih dahulu lalu ``User`` dapat memilih pemesanan mana yang akan dibayar dengan saldo yang dimiliki. Apabila saldo tidak mencukupi, maka ``User`` akan diminta untuk topup terlebih dahulu. <br>
 <img width="486" height="413" alt="image" src="https://github.com/user-attachments/assets/f07dfc8c-7a6d-4588-9a93-007c5d304ea2" />
 
+5. Topup saldo paw, opsi ini dipilih apabila ``User`` ingin mengisi saldo dengan mata uang ``Paw`` untuk bisa melakukan pembayaran pada ``PetHouse``. <br>
 <img width="565" height="293" alt="image" src="https://github.com/user-attachments/assets/7a1865e5-0f1b-4e94-acba-2cd10f1be882" />
 
+6. Riwayat pembayaran, opsi ini menampilkan riwayat transaksi ``User`` pada ``petHouse``. <br>
 <img width="452" height="422" alt="image" src="https://github.com/user-attachments/assets/a77a3c20-d00e-4b0b-b8cf-2e8c4d11308d" />
 
 <img width="701" height="661" alt="image" src="https://github.com/user-attachments/assets/e5604284-af85-44a2-867d-3962d82b8d0c" />
 
 <img width="395" height="407" alt="image" src="https://github.com/user-attachments/assets/5c447ed6-93c6-4f42-b057-64aa573bda58" />
-
-
 
 
 

@@ -9,6 +9,14 @@
 3. Nova Cynthia	(2609116031)
 4. Chirenia Orphayana Altris Ganggung	(2609116038)
 
+| Nama Anggota | NIM | Peran & Tanggung Jawab | GitHub |
+| :---: | :--- | :---: | :--- |
+| *Brian Hotlan Sitompul* | 2609116035 | Peran| @Nairbeeeeee (https://github.com/Nairbeeeeee) |
+| *Sarah Afifah Ramadhani* | 2609116024 | Peran | @sarahafifahramadhani (https://github.com/sarahafifahramadhani) |
+| *Nova Cynthia* | 2609116031 | Peran | @novacynthia11-commits (https://github.com/novacynthia11-commits) 
+| *Chirenia Orphayana Altris Ganggung* | 2609116038 | Peran | @ChireniaOrphayanaAltrisGanggung
+(https://github.com/ChireniaOrphayanaAltrisGanggung) |
+
 ## Deskripsi
 
 Program ini digunakan untuk mengelola data perawatan hewan peliharaan dimana terdapat 2 role, yaitu Admin dan user. Kedua role harus login terlebih dahulu dengan menggunakan username dan password untuk masuk ke dalam program, setiap user wajib registrasi akun sebelum login. Role 'Admin' memiliki hak akses untuk menambah data pelanggan, menampilkan data pelanggan, melihat antrian, mengubah data pelanggan, menghapus data pelanggan dan melihat laporan keuangan. Sedangkan role 'User' hanya dapat melihat paket jasa, melihat antrian, melakukan pembayaraan dan top up. Berikut tipe - tipe kode yang kami gunakan pada program :
